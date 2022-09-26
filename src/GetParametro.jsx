@@ -27,15 +27,12 @@ export const Detail = async(props) => {
         ))}
       </ul> */}
       <div>{url}</div>
+      <div>{query}</div>
     </>
   );
 };
 
-export const ObtenerParametro = () => {
-  const url = 'http://localhost:9090/api/reservas/transaccion?'
-  // fetch(url + query).then(resp => {
-  //   resp.json();
-  // })
+export const ObtenerParametro = async () => {
   return (
     <>
       <h1>Obtener el parametro</h1>
