@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-function App() {
-    //document.createElement...(Otra forma de )
-    return (<h1>Hola Mundo</h1>)
-}
+//Aqui importamos nuestros componentes
+import { HolaMundo } from './HolaMundo';
 
 ReactDOM.createRoot( document.getElementById('root') ).render(
     <React.StrictMode>
-        <App />
+        <HolaMundo />
     </React.StrictMode>
-
 )
+
