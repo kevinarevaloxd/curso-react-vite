@@ -8,7 +8,7 @@ import { HolaMundo } from './HolaMundo';
 
 import { FirstApp } from './FirstApp'; //Primera tarea( Crear un componente )
 
-import { ObtenerParametro, Detail} from './GetParametro';
+import { ObtenerParametro, Detail } from './GetParametro';
 
 import './styles.css'; //Implementando estilos con CSS
 
