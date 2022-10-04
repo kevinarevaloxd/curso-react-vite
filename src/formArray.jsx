@@ -4,21 +4,11 @@ let matrizObjetos = [
   { rut: 3, nombres: "mario", apellidos: "zapata" }
 ];
 
-// let rut = [1,2,3]
-// let nombres = ['Kevin', 'Jazna', 'Mario']
-// let apellidos = ['Arevalo', 'Meza', 'Zapata']
-// let objeto = {n: 'Soy un objeto'}
-
-let formData = new FormData()
-formData.append('name', 'John');
-formData.append('password', 'John123');
-console.log(formData.getAll('name'))
-
 const getResultado = async () => {
   const url = "http://localhost:9090/api/acompanantes";
   const peticion = fetch(url, {
     method: "POST",
-    body: formData
+    body: JSON.stringify(matrizObjetos)
   });
   peticion
     .then((resp) => resp.json())
