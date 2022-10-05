@@ -4,16 +4,19 @@ let matrizObjetos = [
   { rut: 3, nombres: "mario", apellidos: "zapata" }
 ];
 
+
+
 const getResultado = async () => {
   const url = "http://localhost:9090/api/acompanantes";
   const peticion = fetch(url, {
     method: "POST",
-    body: JSON.stringify(matrizObjetos)
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({lista: matrizObjetos})
   });
   peticion
     .then((resp) => resp.json())
-    .then(({msg, formData}) => {
-      console.log(msg, formData);
+    .then(({msg}) => {
+      console.log(msg);
     })
     .catch(console.warn);
 };

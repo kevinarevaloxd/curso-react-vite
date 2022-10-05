@@ -6,18 +6,18 @@ import { BrowserRouter } from "react-router-dom";
 // import { HolaMundo } from './HolaMundo';
 // import { FirstApp } from './FirstApp'; //Primera tarea( Crear un componente )
 // import { ObtenerParametro, Detail } from './GetParametro';
-// import { FormArray } from './FormArray';
+import { FormArray } from './FormArray';
 // import { SubirArchivo } from './SubirArchivo';
-import { CounterApp } from "./CounterApp";
+// import { CounterApp } from "./CounterApp";
 import "./styles.css"; //Implementando estilos con CSS
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
-  <React.StrictMode>
-    <CounterApp value={20} />
-    {/* <FirstApp title="Hola, Soy Vegeta" /> */}
-  </React.StrictMode>
+    <BrowserRouter>
+    <FormArray />
+    </BrowserRouter>
+
   // <BrowserRouter>
   // <CounterApp value={10} />
   // </BrowserRouter>
