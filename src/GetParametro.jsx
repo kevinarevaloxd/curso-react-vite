@@ -6,23 +6,25 @@ const getResultado = async () => {
   let query = searchParams.toString();
   const url = "http://localhost:9090/api/reservas/transaccion?";
   const peticion = fetch(url + query);
-    peticion
-      .then( resp => resp.json() )
-      .then( data => {
-        console.log(data.msg)
-      })
-      .catch( console.warn )
+  peticion
+    .then((resp) => resp.json())
+    .then((data) => {
+      console.log(data.msg);
+    })
+    .catch(console.warn);
 };
 
-
 export const Detail = (props) => {
-
   getResultado();
-
 
   return (
     <>
       <div>
+        <form action="http://localhost:9090/api/reservas" method="post">
+          <input
+          />
+          <input type="submit" value="Pagar" />
+        </form>
         <h2>Hola</h2>
       </div>
     </>
